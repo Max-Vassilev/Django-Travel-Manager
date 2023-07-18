@@ -8,6 +8,7 @@ from FinalProject.trips.models import VisitedPlace
 from FinalProject.common.models import Post
 
 
+# Hello man :)
 class RegisterUserView(views.CreateView):
     template_name = 'user/register-user.html'
     form_class = RegisterUserForm
