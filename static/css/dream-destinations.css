@@ -1,0 +1,133 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+
+.info_window {
+    background-color: #737373;
+    height: 78vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.place_card {
+    width: 150px;
+    height: 385px;
+    background-color: #b2b2b2;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+    font-weight: 700;
+}
+
+.place_card img {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 15px;
+
+}
+
+.dream-destination-btn {
+    font-size: 25px;
+    background-color: #5fdc5f;
+    font-weight: bold;
+    width: 20%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.delete-destination {
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 22px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete-destination a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+.edit-destination {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 22px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit-destination a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* form : */
+
+.add-edit-destination {
+    background-color: darkgray;
+    width: 300px;
+    padding: 20px;
+    margin: 175px auto;
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm-add-edit-destination {
+    background-color: #8c8cec;
+    width: 45%;
+    height: 30px;
+    font-family: sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+
+.i-went-there {
+    background-color: orange;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.i-went-there a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}

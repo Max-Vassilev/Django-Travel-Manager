@@ -1,0 +1,26 @@
+{% extends 'core/../common/../core/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+    <div class="profile-window">
+
+        <img src="{% static 'images/profile photo.jpg' %}" alt="profile image">
+
+        <h1>{{ request.user }}</h1>
+
+        <h2>Number of posted images: {{ user_posts_count }}</h2>
+
+        <div>
+            <h2>Number of dream destinations: {{ dream_destinations_count }}</h2>
+            <h2>Number of visited places: {{ visited_places_count }}</h2>
+
+        </div>
+
+        <section>
+            <a href="{% url 'dream destinations' pk=request.user.pk %}">Dream destinations</a>
+            <a href="{% url 'visited places' pk=request.user.pk %}">Visited places</a>
+        </section>
+    </div>
+{% endblock %}

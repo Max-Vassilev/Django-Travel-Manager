@@ -1,0 +1,43 @@
+.share-post-form{
+    width: 30vw;
+    height: 45vh;
+    background-color: #8f8f8f;
+    margin: 130px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    border-radius: 15px;
+
+}
+
+.share-post-form input{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+
+.share-btn{
+    background-color: #1e751e;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 20%;
+    height: 40px;
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 5px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+
+
+
+

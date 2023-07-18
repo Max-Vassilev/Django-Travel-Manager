@@ -1,0 +1,30 @@
+{% extends 'core/../common/../core/base.html' %}
+{% load forms %}
+
+
+{% block content %}
+
+    <div class="info_window">
+        <a href="{% url 'profile page user' %}" class="back-to-profile-btn">Back to profile</a>
+
+
+        <h1>Dream destinations:</h1>
+
+        <div class="cards">
+            {% for place in dream_destinations %}
+                <div class="place_card">
+                    <img src="{{ place.place_photo }}" alt="Place image">
+                    <h3>{{ place.location }}</h3>
+
+                    <h4 class="delete-destination"><a href="{% url 'delete destination' pk=place.pk %}">Delete</a>
+                    </h4>
+                    <h4 class="edit-destination"><a href="{% url 'edit destination' pk=place.pk %}">Edit</a></h4>
+                    <h4 class="i-went-there"><a href="{% url 'i went there' pk=place.pk %}">I went there!</a></h4>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a href="{% url 'add destination' %}" class="dream-destination-btn">Add dream destination</a>
+
+
+{% endblock %}

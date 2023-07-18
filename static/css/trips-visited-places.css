@@ -1,0 +1,115 @@
+.info_window {
+    background-color: #737373;
+    height: 78vh;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.place_card {
+    width: 150px;
+    height: 350px;
+    background-color: #b2b2b2;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+    font-weight: 700;
+}
+
+.place_card img {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 15px;
+
+}
+
+.visited-place-btn {
+    font-size: 25px;
+    background-color: #5fdc5f;
+    font-weight: bold;
+    width: 20%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.delete-trip {
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete-trip a {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+
+.edit-trip {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit-trip a {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+
+/*add and edit*/
+
+
+.add-edit-trip {
+    background-color: darkgray;
+    width: 300px;
+    padding: 20px;
+    margin: 200px auto;
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm-add-edit-trip {
+    background-color: #8c8cec;
+    width: 45%;
+    height: 30px;
+    font-family: sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 1px solid black;
+}

@@ -1,0 +1,29 @@
+{% extends 'core/../common/../core/base.html' %}
+{% load forms %}
+
+
+{% block content %}
+
+    <div class="info_window">
+        <a href="{% url 'profile page user' %}" class="back-to-profile-btn">Back to profile</a>
+
+
+        <h1>Visited places:</h1>
+
+        <div class="cards">
+            {% for place in visited_places %}
+                <div class="place_card">
+                    <img src="{{ place.place_photo }}" alt="Place image">
+                    <h3>{{ place.location }}</h3>
+                    <p>{{ place.date_visited }}</p>
+
+                    <h4 class="delete-trip"><a href="{% url 'delete trip' pk=place.pk %}">Delete</a></h4>
+                    <h4 class="edit-trip"><a href="{% url 'edit trip' pk=place.pk %}">Edit</a></h4>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a href="{% url 'add trip' %}" class="visited-place-btn">Add visited place</a>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load forms %}
+
+{% block content %}
+
+    <form action="{% url 'add post page' %}" method="post" class="share-post-form">
+        <h1>Share a post: </h1>
+        {{ form.location|placeholder:"Location" }}
+        {{ form.image_url|placeholder:"Picture URL" }}
+        {{ form.post_information|placeholder:"Post information" }}
+        {% csrf_token %}
+        <button type="submit" class="share-btn">Share</button>
+    </form>
+
+{% endblock %}

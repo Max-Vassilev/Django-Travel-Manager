@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <div class="about-window">
+        <h1>About the idea:</h1>
+        <p>
+            Travel manager helps you organize all your travels.
+            Here you can keep track of the places you have visited and your dream destinations.
+            You can also share pictures of interesting places.
+            Every user can "like" and "comment" the shared pictures in the gallery.
+        </p>
+        <p>
+            In the "Visited places" section you can manage the trips you have already been to.
+            Every user can create, view, edit and delete a trip.
+        </p>
+        <p>
+            The "Dream destinations" section is for the places you wish to visit in the future.
+            Every user can create, view, edit and delete a destination.
+        </p>
+        <p>
+            Feeling social? Check out the gallery section where you can share a photo, see other
+            posts and interact with them.
+        </p>
+        <p>
+            What are you waiting for?
+            <a href="{% url 'register user' %}">Create an account</a>
+        </p>
+        <p>
+            You already have one?
+            <a href="{% url 'login user' %}">Login</a>
+        </p>
+
+
+    </div>
+{% endblock %}

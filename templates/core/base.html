@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Travel manager App</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+
+
+</head>
+
+<body>
+<div id="base-box">
+
+    <header>
+        <nav>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'gallery page' %}" class="gallery-btn"><i class="fa-regular fa-image"> Gallery</i></a>
+
+            {% else %}
+                <a href="{% url 'home page' %}" class="travel-manager-btn"><i class="fa-solid fa-earth-americas"> Travel Manager</i></a>
+            {% endif %}
+
+            <ul>
+
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'add post page' %}"><i class="fa-solid fa-share"> Share a photo</i></a></li>
+                    <li><a href="{% url 'profile page user' %}"><i class="fa-solid fa-user"> My profile</i></a></li>
+                    <li><a href="{% url 'logout user' %}"><i class="fa-solid fa-right-from-bracket"> Logout</i></a></li>
+                {% else %}
+                    <li><a href="{% url 'about page' %}"><i class="fa-solid fa-circle-info"> About</i></a></li>
+                    <li><a href="{% url 'login user' %}"><i class="fa-solid fa-right-to-bracket"> Login</i></a></li>
+                    <li><a href="{% url 'register user' %}"><i class="fa-solid fa-address-card"> Register</i></a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+            {% if not request.user.is_authenticated %}
+                <div class="hello-guest">
+                    <h1>Welcome to your new Travel Manager !</h1>
+                    <h2>Manage all your travels here.</h2>
+                </div>
+            {% endif %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div>
+            &copy;Travel manager 2023. All rights reserved.
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

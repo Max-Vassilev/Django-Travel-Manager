@@ -1,0 +1,13 @@
+{% extends 'core/../common/../core/base.html' %}
+
+{% block content %}
+
+    <form enctype="multipart/form-data" method="post" class="add-edit-destination">
+    <h1>Add destination:</h1>
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="confirm-add-edit-destination" type="submit">Add Place</button>
+    </form>
+{% endblock %}
