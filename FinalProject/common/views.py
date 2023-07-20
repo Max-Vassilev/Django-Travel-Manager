@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.views import generic as views
 from FinalProject.common.forms import SharePostForm
-from FinalProject.common.models import Post
+from FinalProject.common.models import Post, Like
 
 
 class HomePageView(views.TemplateView):
@@ -19,7 +19,13 @@ class GalleryView(LoginRequiredMixin, views.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all()
+
+        posts = Post.objects.all()
+
+        for post in posts:
+            post.like_count = post.like_set.count()
+
+        context['posts'] = posts
         return context
 
 
@@ -51,3 +57,19 @@ def post_delete(request, pk):
     post.delete()
     user_pk = request.user.pk
     return redirect("gallery page")
+
+
+def like_functionality(request, pk):
+
+    post = Post.objects.get(id=pk)
+    like_object = Like.objects.filter(to_post=post, user=request.user).first()
+
+    if like_object:
+        like_object.delete()
+    else:
+        new_like_object = Like(to_post=post, user=request.user)   # new
+        new_like_object.save()
+
+    return redirect("gallery page")
+
+    # return redirect(request.META["HTTP_REFERER"] + f"#{pk}")

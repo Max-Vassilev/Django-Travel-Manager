@@ -11,3 +11,8 @@ class Post(models.Model):
     post_information = models.CharField(max_length=150, null=True, blank=True)
 
     posted_by_user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+
+
+class Like(models.Model):
+    to_post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
