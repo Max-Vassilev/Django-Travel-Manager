@@ -24,6 +24,7 @@ class GalleryView(LoginRequiredMixin, views.TemplateView):
 
         for post in posts:
             post.like_count = post.like_set.count()
+            post.is_liked = post.like_set.filter(user=self.request.user).exists()
 
         context['posts'] = posts
         return context
@@ -60,16 +61,14 @@ def post_delete(request, pk):
 
 
 def like_functionality(request, pk):
-
     post = Post.objects.get(id=pk)
     like_object = Like.objects.filter(to_post=post, user=request.user).first()
 
     if like_object:
         like_object.delete()
+
     else:
-        new_like_object = Like(to_post=post, user=request.user)   # new
+        new_like_object = Like(to_post=post, user=request.user)  # new
         new_like_object.save()
 
-    return redirect("gallery page")
-
-    # return redirect(request.META["HTTP_REFERER"] + f"#{pk}")
+    return redirect(request.META["HTTP_REFERER"] + f"#{pk}")
