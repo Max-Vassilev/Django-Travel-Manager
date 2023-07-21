@@ -1,0 +1,12 @@
+.add-comment{
+    width: 50vw;
+    height: 40vh;
+    background-color: #696969;
+    padding: 10px;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 15px;
+}

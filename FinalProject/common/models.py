@@ -16,3 +16,14 @@ class Post(models.Model):
 class Like(models.Model):
     to_post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+
+
+class Comment(models.Model):
+    to_post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+
+    text = models.CharField(max_length=45)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.text} - {self.created_at}"

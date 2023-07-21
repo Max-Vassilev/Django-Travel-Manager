@@ -155,7 +155,7 @@ header ul {
     border-radius: 15px;
     overflow: hidden;
     padding-bottom: 20px;
-    height: 70vh;
+    height: 88vh;
     width: 35vw;
     display: flex;
     flex-direction: column;
@@ -213,7 +213,6 @@ header ul {
     padding: 10px;
     font-size: 30px;
     margin-bottom: 10px;
-    color: #b72e2e;
 }
 
 .lower section {
@@ -221,4 +220,23 @@ header ul {
     height: 20%;
     display: flex;
     justify-content: space-evenly;
+}
+
+#full-like-btn {
+    color: #b72e2e;
+}
+
+.comment-btn {
+    background-color: #8f8f8f;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #16672b;
+
+}
+
+.last-comment {
+    font-size: 20px;
+    text-align: center;
 }

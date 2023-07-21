@@ -78,4 +78,4 @@ def i_went_there_view(request, pk):
     destination.delete()
 
     user_pk = request.user.pk
-    return redirect("visited places", pk=user_pk)
+    return redirect("dream destinations", pk=user_pk)

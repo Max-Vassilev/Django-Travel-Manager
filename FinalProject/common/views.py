@@ -1,9 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from django.views import generic as views
-from FinalProject.common.forms import SharePostForm
-from FinalProject.common.models import Post, Like
+from FinalProject.common.forms import SharePostForm, CommentPostForm
+from FinalProject.common.models import Post, Like, Comment
 
 
 class HomePageView(views.TemplateView):
@@ -24,6 +25,9 @@ class GalleryView(LoginRequiredMixin, views.TemplateView):
 
         for post in posts:
             post.like_count = post.like_set.count()
+            post.comments_count = post.comment_set.count()
+            post.latest_comment = post.comment_set.all().last()
+
             post.is_liked = post.like_set.filter(user=self.request.user).exists()
 
         context['posts'] = posts
@@ -72,3 +76,24 @@ def like_functionality(request, pk):
         new_like_object.save()
 
     return redirect(request.META["HTTP_REFERER"] + f"#{pk}")
+
+
+def comment_functionality(request, pk):
+    post = Post.objects.get(pk=pk)
+
+    form = CommentPostForm()
+
+    if request.method == 'POST':
+        form = CommentPostForm(request.POST)
+
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.to_post = post
+            comment.user = request.user
+            comment.save()
+            return redirect('gallery page')
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'common/comment-post.html', context)

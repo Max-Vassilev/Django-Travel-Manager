@@ -77,6 +77,8 @@ USE_TZ = True
 
 # Changed settings:
 
+TIME_ZONE = 'Europe/Sofia'
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
