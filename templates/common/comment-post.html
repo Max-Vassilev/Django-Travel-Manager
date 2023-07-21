@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+    <form enctype="multipart/form-data" method="post" class="add-comment">
+    <h1>Add comment:</h1>
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="confirm-add-comment" type="submit">Add comment</button>
+    </form>
+
+{% endblock %}
