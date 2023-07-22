@@ -7,7 +7,6 @@
             {# So the post card is not on top when user likes the post: #}
             <div id="{{ post.id }}">
 
-
                 <div class="post-card">
 
                     <img src="{{ post.image_url }}" alt="post photo" class="post-photo">
@@ -25,7 +24,7 @@
 
                     <h3>Total likes: {{ post.like_count }}</h3>
 
-                    <section class="lower section">
+                    <section class="lower-section">
 
                         {% if post.is_liked %}
                             <a href="{% url 'like' pk=post.pk %}" class="like-btn" id="full-like-btn"><i
@@ -40,10 +39,9 @@
                                 class="fa-solid fa-comment-dots"></i></a>
 
 
-                        {% if post.latest_comment %}
-                            <a href="#" class="comment-btn"><i
-                                    class="fa-regular fa-comments"></i></a>
-                        {% endif %}
+                        <a href="#" class="comment-btn"><i
+                                class="fa-regular fa-comments"></i></a>
+
 
                         {% if post.posted_by_user == request.user %}
                             <a href="{% url 'delete post' pk=post.pk %}" class="delete-btn"><i
@@ -54,8 +52,9 @@
                     <section class="last-comment">
 
                         {% if post.latest_comment %}
-                            <h4>Total comments: {{ post.comments_count }}</h4>
-                            <p>{{ post.latest_comment.created_at }} - {{ post.latest_comment.text }}</p>
+                            <h4>Last comment:</h4>
+                            <div>At: {{ post.latest_comment.created_at }} {{ post.latest_comment.user }} said:
+                                <h3>{{ post.latest_comment.text }}</h3></div>
                         {% else %}
                             <h4>No comments yet</h4>
                         {% endif %}

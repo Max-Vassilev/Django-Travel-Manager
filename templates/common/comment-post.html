@@ -2,8 +2,8 @@
 
 {% block content %}
 
-    <form enctype="multipart/form-data" method="post" class="add-comment">
-    <h1>Add comment:</h1>
+    <form enctype="multipart/form-data" method="post" class="add-comment-form">
+    <h1>What is on your mind ?</h1>
 
         {% csrf_token %}
         {{ form.as_p }}
