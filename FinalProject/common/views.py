@@ -27,6 +27,12 @@ class GalleryView(LoginRequiredMixin, views.TemplateView):
             post.like_count = post.like_set.count()
             post.comments_count = post.comment_set.count()
             post.latest_comment = post.comment_set.all().last()
+            post.all_comments = post.comment_set.all()
+
+            if len(post.all_comments) > 5:
+                post.latest_comments = post.all_comments[-5:]
+            else:
+                post.latest_comments = post.all_comments
 
             post.is_liked = post.like_set.filter(user=self.request.user).exists()
 

@@ -4,63 +4,77 @@
     <div class="gallery-window">
 
         {% for post in posts %}
-            {# So the post card is not on top when user likes the post: #}
+
             <div id="{{ post.id }}">
 
-                <div class="post-card">
+                <section class="post-card-and-post-comment">
 
-                    <img src="{{ post.image_url }}" alt="post photo" class="post-photo">
+                    <div class="post-card">
 
-                    {% if post.posted_by_user == request.user %}
-                        <h3>Posted by: you</h3>
-                    {% else %}
-                        <h3>Posted by: {{ post.posted_by_user }}</h3>
-                    {% endif %}
-
-                    <div class="location-and-info">
-                        <h2><i class="fa-solid fa-location-dot"> {{ post.location }}</i></h2>
-                        <h2>{{ post.post_information }}</h2>
-                    </div>
-
-                    <h3>Total likes: {{ post.like_count }}</h3>
-
-                    <section class="lower-section">
-
-                        {% if post.is_liked %}
-                            <a href="{% url 'like' pk=post.pk %}" class="like-btn" id="full-like-btn"><i
-                                    class="fa-solid fa-heart"></i></a>
-                        {% else %}
-                            <a href="{% url 'like' pk=post.pk %}" class="like-btn"><i
-                                    class="fa-regular fa-heart"></i></a>
-                        {% endif %}
-
-
-                        <a href="{% url 'comment' pk=post.pk %}" class="comment-btn"><i
-                                class="fa-solid fa-comment-dots"></i></a>
-
-
-                        <a href="#" class="comment-btn"><i
-                                class="fa-regular fa-comments"></i></a>
-
+                        <img src="{{ post.image_url }}" alt="post photo" class="post-photo">
 
                         {% if post.posted_by_user == request.user %}
-                            <a href="{% url 'delete post' pk=post.pk %}" class="delete-btn"><i
-                                    class="fa-solid fa-trash-can"></i></a>
+                            <h3>Posted by: you</h3>
+                        {% else %}
+                            <h3>Posted by: {{ post.posted_by_user }}</h3>
                         {% endif %}
-                    </section>
 
-                    <section class="last-comment">
+                        <div class="location-and-info">
+                            <h2><i class="fa-solid fa-location-dot"> {{ post.location }}</i></h2>
+                            <h2>{{ post.post_information }}</h2>
+                        </div>
 
+                        <h3>Total likes: {{ post.like_count }}</h3>
+
+                        <section class="lower-section">
+
+                            {% if post.is_liked %}
+                                <a href="{% url 'like' pk=post.pk %}" class="like-btn" id="full-like-btn"><i
+                                        class="fa-solid fa-heart"></i></a>
+                            {% else %}
+                                <a href="{% url 'like' pk=post.pk %}" class="like-btn"><i
+                                        class="fa-regular fa-heart"></i></a>
+                            {% endif %}
+
+
+                            <a href="{% url 'comment' pk=post.pk %}" class="comment-btn"><i
+                                    class="fa-solid fa-comment-dots"></i></a>
+
+
+                            <a href="#" class="comment-section-btn"><i
+                                    class="fa-regular fa-comments"></i></a>
+
+
+                            {% if post.posted_by_user == request.user %}
+                                <a href="{% url 'delete post' pk=post.pk %}" class="delete-btn"><i
+                                        class="fa-solid fa-trash-can"></i></a>
+                            {% endif %}
+                        </section>
+
+
+                    </div>
+
+                    <div class="post-comments">
+                        <h2>Latest comments:</h2>
+                        <hr>
                         {% if post.latest_comment %}
-                            <h4>Last comment:</h4>
-                            <div>At: {{ post.latest_comment.created_at }} {{ post.latest_comment.user }} said:
-                                <h3>{{ post.latest_comment.text }}</h3></div>
+                            {% for comment in post.latest_comments %}
+
+                                <div>At: {{ comment.created_at }} {{ comment.user }} said:
+                                    <h3>{{ comment.text }}</h3></div>
+
+                                <hr>
+
+
+                            {% endfor %}
+
                         {% else %}
                             <h4>No comments yet</h4>
                         {% endif %}
-                    </section>
 
-                </div>
+
+                    </div>
+                </section>
 
             </div>
         {% endfor %}
