@@ -50,3 +50,7 @@ The last 6 comments are visible when the user presses the other icon (representi
 
 <img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/1f395855-f344-4533-b992-dbf5a36c0033">
 
+My profile - shows the number of posts by the logged account and has two sections (dream destinations and visited places):
+
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/088c130a-82c4-44ce-81e5-220f86bcad16">
+
