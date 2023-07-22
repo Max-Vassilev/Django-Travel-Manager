@@ -7,3 +7,6 @@ It is my final project at SoftUni so you can find most of the code in the folder
 
 
 Check out some screenshots: 
+
+Index page (for unauthenticated users):
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/fb75ca7a-fd71-4677-a894-0413c2180b25">
