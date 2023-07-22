@@ -54,3 +54,7 @@ My profile - shows the number of posts by the logged account and has two section
 
 <img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/088c130a-82c4-44ce-81e5-220f86bcad16">
 
+Dream destinations section:
+
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/823dab56-5a63-48b1-adf5-13052e7c4b64">
+
