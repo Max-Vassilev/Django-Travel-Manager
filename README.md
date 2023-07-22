@@ -38,7 +38,15 @@ Like functionality - when the logged user has liked the post, the heart turns re
 
 <img width="300" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/8638be73-9e89-4304-8faa-238b917f78d9">
 
-As you can see here, only the user who posted the photo is able to delete it:
+As you can see here, only the user who posted the photo is able to delete it (in this case we are logged in as "maxim"):
 
 <img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/1b6b37ac-4a8f-43f4-8fe7-5932fac648eb">
+
+Comment functionality (appears when the user presses the comment button with the three dots):
+
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/4941d177-54f7-4f9e-a7e4-e5a63881f46a">
+
+The last 6 comments are visible when the user presses the other icon (representing two messages):
+
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/1f395855-f344-4533-b992-dbf5a36c0033">
 
