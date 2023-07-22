@@ -59,3 +59,7 @@ this will automatically move the destination to the "visited places" section:
 
 <img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/823dab56-5a63-48b1-adf5-13052e7c4b64">
 
+Visited places section:
+
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/f863ca41-5e43-416a-9ee7-5a9786fb9c7d">
+
