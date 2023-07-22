@@ -155,7 +155,7 @@ header ul {
     border-radius: 15px;
     overflow: hidden;
     padding-bottom: 20px;
-    height: 88vh;
+    height: 90vh;
     width: 35vw;
     display: flex;
     flex-direction: column;
@@ -165,8 +165,8 @@ header ul {
 }
 
 .post-photo {
-    height: 40%;
-    width: 90%;
+    height: 32%;
+    width: 80%;
     margin: 25px;
     border-radius: 15px;
     border: 2px solid black;
@@ -239,4 +239,14 @@ header ul {
 .last-comment {
     font-size: 20px;
     text-align: center;
+}
+
+
+.lower-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0;
+    padding: 0;
 }

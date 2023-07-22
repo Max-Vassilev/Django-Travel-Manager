@@ -1,12 +1,26 @@
-.add-comment{
-    width: 50vw;
-    height: 40vh;
+.add-comment-form{
+    width: 40vw;
+    height: 30vh;
     background-color: #696969;
-    padding: 10px;
     margin: 10% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 3px solid black;
     border-radius: 15px;
+    padding: 40px;
+
+
 }
+
+.confirm-add-comment{
+    background-color: green;
+    width: 25%;
+    margin: auto;
+    font-weight: 700;
+    border-radius: 15px;
+    height: 75px;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
