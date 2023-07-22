@@ -32,5 +32,9 @@ Once the user is authenticated, he/she is redirected to the "gallery" page:
 <img width="700" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/01f16724-de8e-4389-9d9b-39d06deb0f17">
 
 
+Like functionality - when the logged user has liked the post, the heart turns red: 
+<img width="300" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/c04c88e9-cd3a-4a12-8281-1893d197c13b">
+
+<img width="300" alt="image" src="https://github.com/Max-Vassilev/Django-Travel-Manager/assets/106106321/8638be73-9e89-4304-8faa-238b917f78d9">
 
 
