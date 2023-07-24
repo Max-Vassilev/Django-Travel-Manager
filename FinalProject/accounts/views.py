@@ -1,4 +1,3 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import views as auth_views, login, get_user_model  # login, logout
 from django.urls import reverse_lazy
 from django.views import generic as views  # register view

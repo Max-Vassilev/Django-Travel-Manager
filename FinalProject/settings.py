@@ -111,8 +111,6 @@ INSTALLED_APPS = [
     'FinalProject.destinations',  # destination add, destination delete / destinations
 ]
 
-# print(os.environ.get('BASE_DIR', 'nekvo_postgre'))
-
 
 DEBUG = True
 
@@ -122,4 +120,4 @@ AUTH_USER_MODEL = 'accounts.TravelUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('gallery page')
 
-LOGOUT_REDIRECT_URL = reverse_lazy("gallery page")
+LOGOUT_REDIRECT_URL = reverse_lazy("home page")

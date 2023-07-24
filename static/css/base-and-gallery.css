@@ -2,8 +2,8 @@
 body {
     background-image: url('/static/images/back_5.jpg');
     background-size: cover;
-    /*background-color: #3e7a51;*/
     position: relative;
+    margin: 0;
 }
 
 
@@ -145,8 +145,8 @@ header ul {
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
-    background-color: gray;
-    padding-top: 100px;
+    background-color: #3f2d2d;
+    padding-top: 50px;
     padding-bottom: 50px;
 
 }
